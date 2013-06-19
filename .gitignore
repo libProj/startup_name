@@ -1,6 +1,11 @@
+# Java compile results #
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Idea IDE settings#
+.idea
+startup_name.iml
