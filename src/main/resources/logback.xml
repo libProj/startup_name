@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%p: %date [%c] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.startup_name" level="${log.level}" />
+
+	<!-- <logger name="org.springframework"> <level value="DEBUG" /> </logger> -->
+
+	<!--Daily rolling file appender -->
+	<!-- <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender"> <File>dms.log</File> <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> 
+		<FileNamePattern>dms-%d{yyyy-MM-dd}.log</FileNamePattern> </rollingPolicy> <encoder> <pattern>%p: %d{yyyy-MM-dd HH:mm:ss} [%c] %m%n</pattern> 
+		</encoder> </appender> -->
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+		<!-- <appender-ref ref="FILE" /> -->
+	</root>
+</configuration>
