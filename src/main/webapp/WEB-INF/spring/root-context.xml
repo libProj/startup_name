@@ -5,14 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        					   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- App properties -->
+    <context:property-placeholder location="classpath*:*.properties" />
+
     <!-- Security config -->
     <import resource="security-context.xml" />
 
     <!-- Hibernate -->
     <import resource="persistance-context.xml" />
 
-    <!-- App properties -->
-    <context:property-placeholder location="classpath:*.properties" />
+    <!-- Internationalization settings -->
+    <import resource="internationalization-context.xml" />
 
     <!-- Load annotated classes ecxept controllers -->
     <context:component-scan base-package="com.startup_name">
