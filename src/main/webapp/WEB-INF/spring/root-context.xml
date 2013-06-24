@@ -8,6 +8,8 @@
     <!-- App properties -->
     <context:property-placeholder location="classpath*:*.properties" />
 
+    <context:annotation-config />
+
     <!-- Security config -->
     <import resource="security-context.xml" />
 
