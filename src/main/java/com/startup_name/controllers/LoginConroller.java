@@ -19,12 +19,12 @@ public class LoginConroller {
 	private static final String LOGIN_FAILED_PROPERTY = "loginFailed";
 	
 	@RequestMapping(value = ROOT_MAPPING, method = RequestMethod.GET)
-	public String root(ModelMap model) {
-		return REDIRECT + LOGIN_MAPPING;
-	}
+	public String root() {
+        return REDIRECT + LOGIN_MAPPING;
+    }
 
 	@RequestMapping(value = LOGIN_MAPPING, method = RequestMethod.GET)
-	public String login(ModelMap model) {
+	public String login() {
 		return LOGIN_PAGE;
 	}
 	
@@ -35,7 +35,7 @@ public class LoginConroller {
 	}
 
     @RequestMapping(value = INDEX_MAPPING, method = RequestMethod.GET)
-    public String index(ModelMap model) {
+    public String index() {
         return INDEX_PAGE;
     }
 
