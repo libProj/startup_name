@@ -9,3 +9,6 @@
 # Idea IDE settings#
 .idea
 startup_name.iml
+
+# Build files #
+target/
