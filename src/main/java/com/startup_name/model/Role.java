@@ -1,12 +1,11 @@
 package com.startup_name.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * Class describes POJO of role entity.
@@ -15,7 +14,7 @@ import javax.validation.constraints.Size;
 @Table(name = "ROLES")
 public class Role {
 
-    public static final Role ANONIMOUS = new Role(1, "ROLE_ANONIMOUS");
+    public static final Role ANONYMOUS = new Role(1, "ROLE_ANONYMOUS");
     public static final Role ADMINISTRATOR = new Role(2, "ROLE_ADMINISTRATOR");
 
     @Column(name = "role_id")

@@ -1,13 +1,13 @@
 package com.startup_name.controllers;
 
-import com.google.common.base.Throwables;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.google.common.base.Throwables;
 
 @Controller
 public class ErrorController {
@@ -18,8 +18,8 @@ public class ErrorController {
     private static final String ERROR_PAGE = "error/error";
     private static final String ERROR = "error";
 
-    @RequestMapping(ERROR)
-    public String customError(HttpServletRequest request, HttpServletResponse response, Model model) {
+    @RequestMapping(value = ERROR, method = RequestMethod.GET)
+    public String customError(HttpServletRequest request, Model model) {
         // Retrieve useful information from the request.
         Throwable throwable = (Throwable) request.getAttribute(ERROR_EXCEPTION);
         Integer statusCode = (Integer) request.getAttribute(ERROR_STATUS_CODE);

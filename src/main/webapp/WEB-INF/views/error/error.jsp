@@ -11,7 +11,7 @@
 <%--Error details are got from ErrorController class--%>
 <div class="row">
     <div class="span12 offset3">
-        <h2><c:out value="${statusCode}"/> error</h2>
+        <h2><c:out value="${statusCode}"/> Error</h2>
         <blockquote>
             <p><c:out value="${exceptionMessage}"/></p>
             <small>The last words from server after you asked about <c:out value="${requestUri}"/></small>
