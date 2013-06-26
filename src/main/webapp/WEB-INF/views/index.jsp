@@ -42,6 +42,10 @@
     		<h3> Welcome! </h3>
   		</div>
 
+        <ul>
+            <li><a href="<c:url value="/user"/>">User page</a></li>
+        </ul>
+
 	</div>
 
 </body>

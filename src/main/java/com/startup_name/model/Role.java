@@ -2,10 +2,7 @@ package com.startup_name.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 /**
@@ -15,11 +12,12 @@ import javax.validation.constraints.Size;
 @Table(name = "ROLES")
 public class Role {
 
-    public static final Role ANONIMOUS = new Role(1, "ROLE_ANONIMOUS");
-    public static final Role ADMINISTRATOR = new Role(2, "ROLE_ADMINISTRATOR");
+    public static final Role ANONIMOUS = new Role(0, "ROLE_ANONIMOUS");
+    public static final Role ADMINISTRATOR = new Role(1, "ROLE_ADMINISTRATOR");
 
     @Column(name = "role_id")
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int roleId;
 
     @Column(name = "role_name")
