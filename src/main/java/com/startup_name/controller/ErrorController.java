@@ -1,4 +1,4 @@
-package com.startup_name.controllers;
+package com.startup_name.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

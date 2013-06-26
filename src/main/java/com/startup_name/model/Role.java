@@ -1,11 +1,16 @@
 package com.startup_name.model;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Size;
+
 
 /**
  * Class describes POJO of role entity.
@@ -19,6 +24,7 @@ public class Role {
 
     @Column(name = "role_id")
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int roleId;
 
     @Column(name = "role_name")
